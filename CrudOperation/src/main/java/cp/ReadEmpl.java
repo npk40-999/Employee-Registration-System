@@ -26,10 +26,6 @@ public class ReadEmpl extends HttpServlet {
 			PreparedStatement ps=con.prepareStatement("select * from oper where id=?");
 			ps.setInt(1, id);
 			ResultSet rs=ps.executeQuery();
-//			while(rs.next())
-//			{
-//				System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getFloat(3)+" "+rs.getString(4));
-//			}
 			PrintWriter pw=res.getWriter();
 			if (rs.next()) 
 			{
@@ -51,7 +47,4 @@ public class ReadEmpl extends HttpServlet {
 			e.printStackTrace();
 		}
 	}
-
-	
-
 }
